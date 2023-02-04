@@ -31,7 +31,6 @@ function activate(context) {
         quickPick.show();
         quickPick.onDidChangeValue(async (value) => {
           quickPick.busy = true;
-          console.log(value);
           try {
             const { data } = await axios.get(
               `https://packagist.org/search.json?q=${value}`
