@@ -11,14 +11,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:composermate.helloWorld"
+    "onCommand:composermate.searchPackagist"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "composermate.helloWorld",
-        "title": "Hello World"
+        "command": "composermate.searchPackagist",
+        "title": "Search Package"
       }
     ]
   },
@@ -28,15 +28,15 @@
     "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.74.0",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.2.0",
     "eslint": "^8.28.0",
     "glob": "^8.0.3",
     "mocha": "^10.1.0",
-    "typescript": "^4.9.3",
-    "@vscode/test-electron": "^2.2.0"
+    "typescript": "^4.9.3"
   },
   "repository": {
     "type": "git",
@@ -48,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/infysumanta/composermate/issues"
   },
-  "homepage": "https://github.com/infysumanta/composermate#readme"
+  "homepage": "https://github.com/infysumanta/composermate#readme",
+  "dependencies": {
+    "axios": "^1.3.2"
+  }
 }
